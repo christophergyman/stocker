@@ -8,7 +8,7 @@ const SearchButton: React.FC<SearchButtonProps> = ({ onClick }) => {
   return (
     <div className="flex justify-center">
       <button 
-        className="text-terracotta text-2xl font-bold hover:text-cream transition-colors duration-200"
+        className="text-terracotta text-4xl font-bold hover:text-cream transition-colors duration-200"
         onClick={onClick}
       >
         Search

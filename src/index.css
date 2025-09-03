@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Doto';
+  src: url('/Users/chezu/Library/Fonts/Doto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Doto';
+  src: url('/Users/chezu/Library/Fonts/Doto-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}

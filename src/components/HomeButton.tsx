@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 interface HomeButtonProps {
   onClick?: () => void;
@@ -6,6 +7,14 @@ interface HomeButtonProps {
 
 const HomeButton: React.FC<HomeButtonProps> = ({ onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
+
+  const handleHomeClick = () => {
+    // Navigate to home index
+    navigate('/');
+    // Refresh the page
+    window.location.reload();
+  };
 
   return (
     <div className="flex justify-center">
@@ -13,7 +22,7 @@ const HomeButton: React.FC<HomeButtonProps> = ({ onClick }) => {
         <button 
           className="text-cream text-4xl font-bold hover:text-terracotta transition-colors duration-200"
           style={{ fontFamily: 'Doto, "Doto Medium", monospace' }}
-          onClick={onClick}
+          onClick={handleHomeClick}
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
